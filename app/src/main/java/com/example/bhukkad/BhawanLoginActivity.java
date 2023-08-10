@@ -63,7 +63,7 @@ public class BhawanLoginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
 
-                        sexylogin();
+                        llogin();
                     }  else{
 
                         mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(com.example.bhukkad.BhawanLoginActivity.this, new OnCompleteListener<AuthResult>() {
@@ -106,7 +106,7 @@ public class BhawanLoginActivity extends AppCompatActivity {
 
                                     FirebaseUser user = mAuth.getCurrentUser();
 
-                                    sexylogin();
+                                    llogin();
 
                                 } else {
                                     // If sign in fails, display a message to the user.
@@ -121,7 +121,7 @@ public class BhawanLoginActivity extends AppCompatActivity {
                     }
                 }
 
-                public void sexylogin() {
+                public void llogin() {
                     //Move to next Activity
                     FirebaseUser user = mAuth.getCurrentUser();
                     Intent intent = new Intent(BhawanLoginActivity.this,Menu.class);
